@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADUN SEN 111 Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="editor">
+            <h2>Blog Previewer</h2>
+
+            <label>Title</label>
+            <input type="text" id="titleInput" maxlength="120" oninput="onTitleInput()"/>
+            <div class="char-count" id="titleCount">0 / 120</div>
+
+            <label>Subtitle</label>
+            <input type="text" id="subtitleInput" maxlength="350" oninput="onSubtitleInput()"/>
+            <div class="char-count" id="subtitleCount">0 / 350</div>
+
+            <label>Tags (space seperated)</label>
+            <input type="text" id="tagInput" placeholder="type and press space..." onkeydown="handleTagKeyEvent(event)"/>
+            <div class="tag-container" id="tagContainer"></div>
+
+            <label>Body</label>
+            <textarea placeholder="Use *bold*, _italic_, and `code`" id="bodyInput" oninput="onBodyInput()"></textarea>
+        </div>
+
+        <div class="preview">
+            <h1 id="previewTitle">Title</h1>
+            <h3 id="previewSubtitle">Subtitle</h3>
+
+            <div class="tag-container">
+                <div class="tags" id="previewTags"></div>
+            </div>
+
+            <hr />
+
+            <div id="previewBody">Start typing...</div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
