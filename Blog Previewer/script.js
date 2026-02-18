@@ -82,5 +82,12 @@ function onBodyInput() {
 
     text = text.replace(/`(.*?)`/g, "<code>$1</code>");
 
+     text = text.replace(/\^(\d+|\([^)]+\)|[a-zA-Z])/g, (m, p1) => {
+        return "<sup>" + p1.replace(/[()]/g, "") + "</sup>";
+    });
+
+    // Subscript: H~2~O or CO~2~
+    text = text.replace(/~(.*?)~/g, "<sub>$1</sub>");
+
     previewBody.innerHTML = text.replaceAll("\n", "<br>") || "Start typing...";
 }

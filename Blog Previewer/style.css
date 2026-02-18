@@ -4,7 +4,8 @@
 
 body {
     margin: 0;
-    background: whitesmoke;
+    background: #171717;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .container {
@@ -16,27 +17,36 @@ body {
 .editor {
     width: 50%;
     padding: 20px;
-    background: white;
+    background: #171717;
     overflow-y: auto;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid #171717;
 }
 
 .editor h2 {
     margin-top: 0;
+    color: #808080;
 }
 
 label {
     font-weight: bold;
     display: block;
     margin-top: 15px;
+    color: #808080;
 }
 
 input, textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    background-color: #262626;
+    color: white;
     outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+input:hover, textarea:hover {
+    border: 1px solid #ccc;
 }
 
 textarea {
@@ -64,14 +74,17 @@ textarea {
     width: 50%;
     padding: 40px;
     overflow-y: visible;
+    background-color: #262626;
+    border-radius: 10px;
 }
 
 .preview h1 {
     margin-bottom: 10px;
+    color: white;
 }
 
 .preview h3 {
-    color: #666;
+    color: #808080;
     margin-top: 0;
 }
 
@@ -90,13 +103,18 @@ textarea {
     font-size: 14px;
 }
 
+.preview #previewBody {
+    color: white;
+}
+
 .preview hr {
     margin: 20px 0;
 }
 
 .preview code {
-    background: #eee;
+    background: #262626;
     padding: 3px 6px;
+    border: 1px solid gray;
     border-radius: 4px;
 }
 
