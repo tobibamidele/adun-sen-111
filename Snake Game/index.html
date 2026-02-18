@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game - Complete Version</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>🐍 Snake Game</h1>
+            <p>Classic Snake Game with Leaderboard</p>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left Side: Game Area -->
+            <div class="game-section">
+                <div class="user-info">
+                    <span id="currentUser">Guest</span>
+                    <button id="changeUserBtn" class="btn-small">Change User</button>
+                </div>
+
+                <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+                <div class="controls">
+                    <button id="startBtn" class="btn">Start Game</button>
+                    <button id="pauseBtn" class="btn" disabled>Pause</button>
+                    <button id="resetBtn" class="btn">Reset</button>
+                </div>
+
+                <div class="stats">
+                    <div class="stat">
+                        <p>Score</p>
+                        <p id="score">0</p>
+                    </div>
+                    <div class="stat">
+                        <p>High Score</p>
+                        <p id="highScore">0</p>
+                    </div>
+                    <div class="stat">
+                        <p>Level</p>
+                        <p id="level">1</p>
+                    </div>
+                </div>
+
+                <div class="instructions">
+                    <h3>How to Play</h3>
+                    <ul>
+                        <li>Use Arrow Keys to move the snake</li>
+                        <li>Eat the red food to grow and gain points</li>
+                        <li>Don't hit the walls or yourself</li>
+                        <li>Score increases with each level</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Side: Leaderboard & User Management -->
+            <div class="leaderboard-section">
+                <!-- User Management -->
+                <div class="user-management">
+                    <h2>User Management</h2>
+                    <div class="form-group">
+                        <input type="text" id="usernameInput" placeholder="Enter username (3-20 chars)">
+                        <button id="createUserBtn" class="btn">Create User</button>
+                    </div>
+                    <div id="userList" class="user-list"></div>
+                </div>
+
+                <!-- Leaderboard -->
+                <div class="leaderboard">
+                    <h2>🏆 Leaderboard</h2>
+                    <div id="leaderboardContent" class="leaderboard-content"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for User Selection/Creation -->
+        <div id="userModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Select or Create User</h2>
+                <div class="form-group">
+                    <input type="text" id="modalUsernameInput" placeholder="Enter username (3-20 chars)">
+                    <button id="modalCreateBtn" class="btn">Create & Play</button>
+                </div>
+                <h3>Your Users:</h3>
+                <div id="modalUserList" class="user-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
