@@ -1,0 +1,87 @@
+body {
+        margin: 0;
+        font-family: "Segoe UI", Helvetica, sans-serif;
+        background-color: #f2f2f2;
+    }
+
+    img[src] {
+        border-radius: 12px;
+    }
+    
+    code {
+        padding: 3px 6px;
+    border: 1px solid gray;
+    border-radius: 4px;
+    }
+
+    /* Header */
+    .header {
+        background: #e5e5e5;
+        padding: 20px 40px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .header img {
+        width: 60px;
+    }
+
+    .header h2 {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .header p {
+        margin: 0;
+        font-size: 14px;
+        color: #555;
+    }
+
+    /* Week Navigation */
+    .week-nav {
+        margin: 40px auto 20px;
+        width: fit-content;
+        background: #dcdcdc;
+        padding: 10px 15px;
+        border-radius: 10px;
+        display: flex;
+        gap: 15px;
+    }
+
+    .week-btn {
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    .week-btn:hover {
+        background: #c0c0c0;
+    }
+
+    .week-btn.active {
+        background: #2e7d32;
+        color: white;
+    }
+
+    /* Content Card */
+    .content-container {
+        width: 500px;
+        margin: auto;
+    }
+
+    .content-card {
+        display: none;
+        background: #dcdcdc;
+        padding: 25px;
+        border-radius: 10px;
+    }
+
+    .content-card.active {
+        display: block;
+    }
+
+    .content-card h3 {
+        margin-top: 0;
+    }
